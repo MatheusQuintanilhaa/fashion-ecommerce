@@ -1,4 +1,4 @@
-import type { Product } from "./types"
+import type { Product } from "./types";
 
 export const products: Product[] = [
   {
@@ -23,9 +23,17 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Camisa Social Masculina",
-    description: "Camisa social slim fit em algodão premium. Ideal para o ambiente corporativo e eventos formais.",
+    description:
+      "Camisa social slim fit em algodão premium. Ideal para o ambiente corporativo e eventos formais.",
     price: 189.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      // Imagem principal - alta qualidade
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=800&fit=crop&q=90&auto=format",
+      // Imagem secundária - detalhe
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=800&fit=crop&q=90&auto=format&crop=top",
+      // Imagem terciária - visão completa
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=800&fit=crop&q=90&auto=format&crop=center",
+    ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
     colors: ["Branco", "Azul"],
@@ -35,7 +43,8 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Jaqueta Jeans Feminina",
-    description: "Jaqueta jeans clássica com lavagem especial. Versátil e atemporal para compor diversos looks.",
+    description:
+      "Jaqueta jeans clássica com lavagem especial. Versátil e atemporal para compor diversos looks.",
     price: 249.9,
     images: [
       "/placeholder.svg?height=600&width=400",
@@ -51,11 +60,15 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Tênis Casual Branco",
-    description: "Tênis casual confortável para o dia a dia. Design moderno e minimalista.",
+    description:
+      "Tênis casual confortável para o dia a dia. Design moderno e minimalista.",
     price: 199.9,
     originalPrice: 249.9,
     discount: 20,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "acessorios",
     sizes: ["36", "37", "38", "39", "40", "41", "42"],
     colors: ["Branco"],
@@ -65,9 +78,13 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Blusa Floral Feminina",
-    description: "Blusa feminina com estampa floral delicada. Tecido leve e confortável para o verão.",
+    description:
+      "Blusa feminina com estampa floral delicada. Tecido leve e confortável para o verão.",
     price: 129.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
     colors: ["Rosa", "Azul"],
@@ -77,9 +94,13 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Calça Chino Masculina",
-    description: "Calça chino em sarja de algodão. Corte moderno e versátil para diversas ocasiões.",
+    description:
+      "Calça chino em sarja de algodão. Corte moderno e versátil para diversas ocasiões.",
     price: 159.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "masculino",
     sizes: ["38", "40", "42", "44", "46"],
     colors: ["Bege", "Marinho"],
@@ -89,9 +110,13 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Bolsa Transversal Couro",
-    description: "Bolsa transversal em couro legítimo. Prática e elegante para o dia a dia.",
+    description:
+      "Bolsa transversal em couro legítimo. Prática e elegante para o dia a dia.",
     price: 349.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "acessorios",
     sizes: ["Único"],
     colors: ["Preto", "Marrom"],
@@ -101,9 +126,13 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Saia Midi Plissada",
-    description: "Saia midi plissada em tecido fluido. Elegante e feminina para diversas ocasiões.",
+    description:
+      "Saia midi plissada em tecido fluido. Elegante e feminina para diversas ocasiões.",
     price: 179.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
     colors: ["Preto", "Nude"],
@@ -113,9 +142,13 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Polo Masculina Premium",
-    description: "Polo masculina em piquet de algodão premium. Conforto e estilo para o casual elegante.",
+    description:
+      "Polo masculina em piquet de algodão premium. Conforto e estilo para o casual elegante.",
     price: 139.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
     colors: ["Branco", "Marinho", "Preto"],
@@ -125,11 +158,15 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Óculos de Sol Aviador",
-    description: "Óculos de sol estilo aviador com proteção UV400. Clássico e atemporal.",
+    description:
+      "Óculos de sol estilo aviador com proteção UV400. Clássico e atemporal.",
     price: 89.9,
     originalPrice: 129.9,
     discount: 31,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "acessorios",
     sizes: ["Único"],
     colors: ["Dourado", "Prata"],
@@ -139,7 +176,8 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Vestido Longo Estampado",
-    description: "Vestido longo com estampa tropical. Perfeito para ocasiões especiais e eventos ao ar livre.",
+    description:
+      "Vestido longo com estampa tropical. Perfeito para ocasiões especiais e eventos ao ar livre.",
     price: 389.9,
     images: [
       "/placeholder.svg?height=600&width=400",
@@ -155,13 +193,17 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Blazer Masculino Slim",
-    description: "Blazer masculino corte slim em tecido misto. Elegância e sofisticação para o guarda-roupa masculino.",
+    description:
+      "Blazer masculino corte slim em tecido misto. Elegância e sofisticação para o guarda-roupa masculino.",
     price: 449.9,
-    images: ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+    images: [
+      "/placeholder.svg?height=600&width=400",
+      "/placeholder.svg?height=600&width=400",
+    ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
     colors: ["Marinho", "Cinza"],
     featured: false,
     inStock: true,
   },
-]
+];

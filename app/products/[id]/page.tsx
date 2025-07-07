@@ -1,49 +1,65 @@
-"use client"
+"use client";
 
-import { Label } from "@/components/ui/label"
-import { useState } from "react"
-import { useParams } from "next/navigation"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Heart, ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react"
-import { products } from "@/lib/data"
-import { useCart } from "@/hooks/use-cart"
-import { useWishlist } from "@/hooks/use-wishlist"
-import { toast } from "sonner"
-import { Breadcrumb } from "@/components/breadcrumb"
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { useParams } from "next/navigation";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Heart,
+  ShoppingCart,
+  Star,
+  Truck,
+  Shield,
+  RotateCcw,
+} from "lucide-react";
+import { products } from "@/lib/data";
+import { useCart } from "@/hooks/use-cart";
+import { useWishlist } from "@/hooks/use-wishlist";
+import { toast } from "sonner";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function ProductDetailPage() {
-  const params = useParams()
-  const { addItem } = useCart()
-  const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist()
-  const [selectedSize, setSelectedSize] = useState("")
-  const [selectedImage, setSelectedImage] = useState(0)
-  const [quantity, setQuantity] = useState(1)
-  const [isLoading, setIsLoading] = useState(false)
+  const params = useParams();
+  const { addItem } = useCart();
+  const {
+    addItem: addToWishlist,
+    removeItem: removeFromWishlist,
+    isInWishlist,
+  } = useWishlist();
+  const [selectedSize, setSelectedSize] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const product = products.find((p) => p.id === Number.parseInt(params.id as string))
-  const isLiked = product ? isInWishlist(product.id) : false
+  const product = products.find(
+    (p) => p.id === Number.parseInt(params.id as string)
+  );
+  const isLiked = product ? isInWishlist(product.id) : false;
 
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
-          <p className="text-gray-600">O produto que você está procurando não existe.</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Produto não encontrado
+          </h1>
+          <p className="text-gray-600">
+            O produto que você está procurando não existe.
+          </p>
         </div>
       </div>
-    )
+    );
   }
 
   const handleAddToCart = async () => {
     if (!selectedSize) {
-      toast.error("Por favor, selecione um tamanho")
-      return
+      toast.error("Por favor, selecione um tamanho");
+      return;
     }
 
-    setIsLoading(true)
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    setIsLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     addItem({
       id: product.id,
@@ -52,7 +68,7 @@ export default function ProductDetailPage() {
       image: product.images[0],
       size: selectedSize,
       quantity: quantity,
-    })
+    });
 
     toast.success("Produto adicionado ao carrinho! 🛒", {
       description: `${product.name} - Tamanho ${selectedSize}`,
@@ -60,32 +76,33 @@ export default function ProductDetailPage() {
         label: "Ver Carrinho",
         onClick: () => (window.location.href = "/cart"),
       },
-    })
+    });
 
-    setIsLoading(false)
-  }
+    setIsLoading(false);
+  };
 
   const handleWishlistToggle = () => {
     if (isLiked) {
-      removeFromWishlist(product.id)
+      removeFromWishlist(product.id);
     } else {
       addToWishlist({
         id: product.id,
         name: product.name,
         price: product.price,
         image: product.images[0],
-      })
+      });
     }
-  }
+  };
 
   const breadcrumbItems = [
     { label: "Produtos", href: "/products" },
     {
-      label: product.category.charAt(0).toUpperCase() + product.category.slice(1),
+      label:
+        product.category.charAt(0).toUpperCase() + product.category.slice(1),
       href: `/products?category=${product.category}`,
     },
     { label: product.name },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -97,49 +114,36 @@ export default function ProductDetailPage() {
           <div className="space-y-4">
             <div className="aspect-square relative overflow-hidden rounded-2xl bg-white">
               <Image
-                src={product.images[selectedImage] || "/placeholder.svg"}
+                src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
                 fill
                 className="object-cover"
                 priority
               />
               {product.discount && (
-                <Badge className="absolute top-4 left-4 bg-red-500 hover:bg-red-600">-{product.discount}%</Badge>
+                <Badge className="absolute top-4 left-4 bg-red-500 hover:bg-red-600">
+                  -{product.discount}%
+                </Badge>
               )}
-            </div>
-
-            <div className="grid grid-cols-4 gap-4">
-              {product.images.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`aspect-square relative overflow-hidden rounded-lg border-2 transition-all duration-200 ${
-                    selectedImage === index
-                      ? "border-purple-500 ring-2 ring-purple-200"
-                      : "border-gray-200 hover:border-purple-300"
-                  }`}
-                >
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`${product.name} ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </button>
-              ))}
             </div>
           </div>
 
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                {product.name}
+              </h1>
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                      className={`h-5 w-5 ${
+                        i < 4
+                          ? "fill-yellow-400 text-yellow-400"
+                          : "text-gray-300"
+                      }`}
                     />
                   ))}
                 </div>
@@ -149,12 +153,18 @@ export default function ProductDetailPage() {
 
             <div className="flex items-center gap-4">
               {product.originalPrice && (
-                <span className="text-2xl text-gray-400 line-through">R$ {product.originalPrice.toFixed(2)}</span>
+                <span className="text-2xl text-gray-400 line-through">
+                  R$ {product.originalPrice.toFixed(2)}
+                </span>
               )}
-              <span className="text-3xl font-bold text-gray-900">R$ {product.price.toFixed(2)}</span>
+              <span className="text-3xl font-bold text-gray-900">
+                R$ {product.price.toFixed(2)}
+              </span>
             </div>
 
-            <p className="text-gray-600 text-lg leading-relaxed">{product.description}</p>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              {product.description}
+            </p>
 
             {/* Size Selection */}
             <div className="space-y-3">
@@ -189,7 +199,9 @@ export default function ProductDetailPage() {
                 >
                   -
                 </Button>
-                <span className="text-xl font-semibold w-12 text-center">{quantity}</span>
+                <span className="text-xl font-semibold w-12 text-center">
+                  {quantity}
+                </span>
                 <Button
                   variant="outline"
                   size="icon"
@@ -227,7 +239,9 @@ export default function ProductDetailPage() {
                 onClick={handleWishlistToggle}
               >
                 <Heart
-                  className={`h-6 w-6 transition-colors duration-200 ${isLiked ? "fill-red-500 text-red-500" : "hover:text-red-500"}`}
+                  className={`h-6 w-6 transition-colors duration-200 ${
+                    isLiked ? "fill-red-500 text-red-500" : "hover:text-red-500"
+                  }`}
                 />
               </Button>
             </div>
@@ -260,5 +274,5 @@ export default function ProductDetailPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

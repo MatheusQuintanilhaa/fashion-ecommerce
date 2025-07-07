@@ -9,11 +9,7 @@ export const products: Product[] = [
     price: 299.9,
     originalPrice: 399.9,
     discount: 25,
-    images: [
-      "/images/products/t-shirt-social-branca/branca-frente.jpg",
-      "/images/products/t-shirt-social-branca/branca-traseira.jpg",
-      "/images/products/t-shirt-social-branca/branca-detalhes.jpg",
-    ],
+    images: ["/images/products/t-shirt-social-branca/branca-frente.jpg"],
     category: "Masculino",
     sizes: ["PP", "P", "M", "G", "GG"],
     colors: ["Preto"],

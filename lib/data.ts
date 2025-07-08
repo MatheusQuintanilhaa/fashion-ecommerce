@@ -23,7 +23,7 @@ export const products: Product[] = [
       "Camisa social slim fit em algodão premium. Ideal para o ambiente corporativo e eventos formais.",
     price: 189.9,
     images: [
-      "https://images.unsplash.com/photo-1713881842156-3d9ef36418cc?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1713881842156-3d9ef36418cc?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
@@ -38,7 +38,7 @@ export const products: Product[] = [
       "Jaqueta jeans clássica com lavagem especial. Versátil e atemporal para compor diversos looks.",
     price: 249.9,
     images: [
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -55,7 +55,7 @@ export const products: Product[] = [
     originalPrice: 249.9,
     discount: 20,
     images: [
-      "https://images.unsplash.com/photo-1655476546240-d25fcff696bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1655476546240-d25fcff696bf?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "acessorios",
     sizes: ["36", "37", "38", "39", "40", "41", "42"],
@@ -70,7 +70,7 @@ export const products: Product[] = [
       "Blusa feminina com estampa floral delicada. Tecido leve e confortável para o verão.",
     price: 129.9,
     images: [
-      "https://images.unsplash.com/photo-1693989241284-b1bc01263135?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1693989241284-b1bc01263135?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -85,7 +85,7 @@ export const products: Product[] = [
       "Calça chino em sarja de algodão. Corte moderno e versátil para diversas ocasiões.",
     price: 159.9,
     images: [
-      "https://plus.unsplash.com/premium_photo-1690359589674-b85931ae8d28?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1690359589674-b85931ae8d28?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["38", "40", "42", "44", "46"],
@@ -100,7 +100,7 @@ export const products: Product[] = [
       "Bolsa transversal em couro legítimo. Prática e elegante para o dia a dia.",
     price: 349.9,
     images: [
-      "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?q=80&w=763&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "acessorios",
     sizes: ["Único"],
@@ -115,7 +115,7 @@ export const products: Product[] = [
       "Saia midi plissada em tecido fluido. Elegante e feminina para diversas ocasiões.",
     price: 179.9,
     images: [
-      "https://images.unsplash.com/photo-1615898290907-0ad011905389?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1615898290907-0ad011905389?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -130,7 +130,7 @@ export const products: Product[] = [
       "Camisa casual masculina em tecido leve. Ideal para o dia a dia.",
     price: 139.9,
     images: [
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
@@ -147,7 +147,7 @@ export const products: Product[] = [
     originalPrice: 129.9,
     discount: 31,
     images: [
-      "https://images.unsplash.com/photo-1567473810954-507d59716c25?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1567473810954-507d59716c25?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "acessorios",
     sizes: ["Único"],
@@ -162,7 +162,7 @@ export const products: Product[] = [
       "Vestido longo, perfeito para ocasiões especiais e eventos ao ar livre.",
     price: 389.9,
     images: [
-      "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -177,8 +177,8 @@ export const products: Product[] = [
       "Blazer masculino corte slim em tecido misto. Elegância e sofisticação para o guarda-roupa masculino.",
     price: 449.9,
     images: [
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],

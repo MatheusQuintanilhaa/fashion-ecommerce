@@ -81,7 +81,7 @@ export function FeaturedProducts() {
               >
                 {/* Product card with enhanced styling */}
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/50 group-hover:border-pink-200/50 h-full">
-                  <ProductCard product={product} priority={index < 2} />
+                  <ProductCard product={product} priority={index === 0} />
 
                   {/* Overlay gradient on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />

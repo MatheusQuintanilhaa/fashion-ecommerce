@@ -34,12 +34,27 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden footer-stable layout-stable">
+    <footer 
+      className="bg-gray-900 text-white relative overflow-hidden"
+      style={{ 
+        height: '600px',
+        minHeight: '600px',
+        maxHeight: '600px',
+        contain: 'layout size style'
+      }}
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 gpu-optimized" style={{ zIndex: 0 }}>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl gpu-optimized"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-500 rounded-full blur-3xl gpu-optimized"></div>
-        <div className="absolute top-40 right-40 w-24 h-24 bg-blue-500 rounded-full blur-3xl gpu-optimized"></div>
+      <div 
+        className="absolute inset-0 opacity-5" 
+        style={{ 
+          zIndex: 0,
+          contain: 'layout paint',
+          willChange: 'auto'
+        }}
+      >
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl" style={{ contain: 'layout' }}></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-500 rounded-full blur-3xl" style={{ contain: 'layout' }}></div>
+        <div className="absolute top-40 right-40 w-24 h-24 bg-blue-500 rounded-full blur-3xl" style={{ contain: 'layout' }}></div>
       </div>
 
       {/* Stats Section */}

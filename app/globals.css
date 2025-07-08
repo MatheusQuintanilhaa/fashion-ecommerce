@@ -92,3 +92,37 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Layout Shift Prevention */
+.layout-stable {
+  contain: layout style paint;
+}
+
+.footer-stable {
+  min-height: 600px;
+  contain: layout;
+  will-change: auto;
+}
+
+.nav-stable {
+  min-width: 320px;
+  contain: layout;
+}
+
+/* Prevent reflows on image loading */
+.image-container {
+  aspect-ratio: 3/4;
+  contain: layout;
+}
+
+/* Stable grid layouts */
+.grid-stable {
+  contain: layout;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+}
+
+/* Performance optimizations */
+.gpu-optimized {
+  transform: translateZ(0);
+  will-change: transform;
+}

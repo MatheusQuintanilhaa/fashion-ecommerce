@@ -70,11 +70,11 @@ export function FeaturedProducts() {
         {/* Products Grid */}
         <div className="relative">
           {/* Grid container with enhanced spacing */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16 grid-stable" style={{ '--cols': 4 } as React.CSSProperties}>
             {featuredProducts.map((product, index) => (
               <div
                 key={product.id}
-                className="group relative transform hover:scale-105 transition-all duration-500 ease-out h-full"
+                className="group relative transform hover:scale-105 transition-all duration-500 ease-out h-full layout-stable"
                 style={{
                   animationDelay: `${index * 150}ms`,
                 }}

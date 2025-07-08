@@ -26,9 +26,9 @@ export function Header() {
   const totalWishlistItems = wishlistItems.length;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm h-20">
+      <div className="max-w-7xl mx-auto px-4 h-full">
+        <div className="flex items-center justify-between h-full min-h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -48,31 +48,31 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 ml-12">
+          <nav className="hidden lg:flex items-center space-x-1 ml-12 nav-stable layout-stable">
             <Link
               href="/"
-              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group"
+              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group whitespace-nowrap"
             >
               Início
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-3/4 transition-all duration-300" />
             </Link>
             <Link
               href="/products"
-              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group"
+              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group whitespace-nowrap"
             >
               Produtos
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-3/4 transition-all duration-300" />
             </Link>
             <Link
               href="/categories"
-              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group"
+              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group whitespace-nowrap"
             >
               Categorias
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-3/4 transition-all duration-300" />
             </Link>
             <Link
               href="/about"
-              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group"
+              className="relative px-4 py-2 text-gray-700 hover:text-purple-600 transition-all duration-200 rounded-lg hover:bg-purple-50 font-medium group whitespace-nowrap"
             >
               Sobre
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-3/4 transition-all duration-300" />

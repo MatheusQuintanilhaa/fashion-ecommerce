@@ -6,7 +6,30 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./hooks/**/*.{js,ts,jsx,tsx}",
+    "./lib/**/*.{js,ts,jsx,tsx}",
     "*.{js,ts,jsx,tsx,mdx}"
+  ],
+  safelist: [
+    // Essential animations for interactivity
+    'animate-pulse',
+    'transition-all',
+    'duration-300',
+    'ease-in-out',
+    'transform',
+    'hover:scale-105',
+    'group-hover:scale-105',
+    'translate-x-1',
+    'rotate-180',
+    'data-[state=open]:rotate-180',
+    // Layout stability
+    'line-clamp-2',
+    'aspect-[3/4]',
+    'text-balance',
+    'sr-only',
+    // Accordion animations
+    'data-[state=closed]:animate-accordion-up',
+    'data-[state=open]:animate-accordion-down',
   ],
   theme: {
   	extend: {
@@ -16,10 +39,6 @@ const config: Config = {
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
@@ -43,24 +62,7 @@ const config: Config = {
   			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			},
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--sidebar-background))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--sidebar-primary))',
-  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			ring: 'hsl(var(--ring))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -91,6 +93,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 export default config;

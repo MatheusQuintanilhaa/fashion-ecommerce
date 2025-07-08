@@ -8,7 +8,7 @@
 
 ## 🚀 [Ver Demo ao Vivo](https://fashion-ecommerce-blue.vercel.app/)
 
-![Fashion E-commerce Preview](https://via.placeholder.com/1200x600/6366f1/ffffff?text=Fashion+E-commerce+Preview)
+![alt text](image.png)
 
 ## ⚡ Destaques Técnicos
 

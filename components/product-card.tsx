@@ -17,9 +17,10 @@ interface ProductCardProps {
   product: Product;
   viewMode?: "grid" | "list";
   priority?: boolean;
+  style?: React.CSSProperties;
 }
 
-export function ProductCard({ product, viewMode = "grid", priority = false }: ProductCardProps) {
+export function ProductCard({ product, viewMode = "grid", priority = false, style }: ProductCardProps) {
   const { addItem } = useCart();
   const {
     addItem: addToWishlist,
@@ -74,9 +75,14 @@ export function ProductCard({ product, viewMode = "grid", priority = false }: Pr
 
   return (
     <div
-      className={`group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out border border-gray-100 transform hover:-translate-y-1 ${
-        viewMode === "list" ? "flex flex-row h-40" : "flex flex-col h-full"
+      className={`group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transform hover:-translate-y-1 product-card-transition ${
+        viewMode === "list" ? "flex flex-row h-40 layout-transition" : "flex flex-col h-full layout-transition"
       }`}
+      style={{
+        transitionDelay: '0ms',
+        animationFillMode: 'both',
+        ...style
+      }}
     >
       <Link href={`/products/${product.id}`}>
         <div

@@ -223,4 +223,96 @@ body {
   background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
 }
 
+/* Animações suaves para mudança de view mode */
+.view-transition {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.view-transition-item {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Transição específica para grid/list */
+.product-grid {
+  transition: grid-template-columns 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Animação para os cards individuais */
+.product-card-transition {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Estados de transição para grid -> list */
+.grid-to-list-transition {
+  animation: gridToList 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.list-to-grid-transition {
+  animation: listToGrid 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes gridToList {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.98) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes listToGrid {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.98) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Fade suave para mudança de layout */
+.layout-transition {
+  animation: layoutShift 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes layoutShift {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Transição suave para o container */
+.container-transition {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth layout shift */
+.layout-smooth {
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 

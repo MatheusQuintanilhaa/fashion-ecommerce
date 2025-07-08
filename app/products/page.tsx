@@ -41,6 +41,20 @@ export default function ProductsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Função para mudança suave de view mode
+  const handleViewModeChange = (newMode: "grid" | "list") => {
+    if (newMode === viewMode) return;
+    
+    setIsTransitioning(true);
+    
+    // Delay para permitir animação suave
+    setTimeout(() => {
+      setViewMode(newMode);
+      setTimeout(() => setIsTransitioning(false), 200);
+    }, 200);
+  };
 
   useEffect(() => {
     // Simular carregamento
@@ -188,24 +202,26 @@ export default function ProductsPage() {
               <Button
                 variant={viewMode === "grid" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => setViewMode("grid")}
-                className={`rounded-lg transition-all duration-200 ${
+                onClick={() => handleViewModeChange("grid")}
+                disabled={isTransitioning}
+                className={`rounded-lg transition-all duration-300 ${
                   viewMode === "grid"
                     ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg"
                     : "hover:bg-purple-50 text-gray-600"
-                }`}
+                } ${isTransitioning ? "opacity-70" : ""}`}
               >
                 <Grid className="h-4 w-4" />
               </Button>
               <Button
                 variant={viewMode === "list" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => setViewMode("list")}
-                className={`rounded-lg transition-all duration-200 ${
+                onClick={() => handleViewModeChange("list")}
+                disabled={isTransitioning}
+                className={`rounded-lg transition-all duration-300 ${
                   viewMode === "list"
                     ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg"
                     : "hover:bg-purple-50 text-gray-600"
-                }`}
+                } ${isTransitioning ? "opacity-70" : ""}`}
               >
                 <List className="h-4 w-4" />
               </Button>
@@ -277,21 +293,28 @@ export default function ProductsPage() {
             </div>
 
             <div
-              className={`grid gap-6 smooth-scroll ${
+              className={`grid gap-6 smooth-scroll product-grid container-transition ${
                 viewMode === "grid"
                   ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                   : "grid-cols-1"
-              }`}
+              } ${isTransitioning ? "opacity-70" : "opacity-100"}`}
+              style={{
+                transition: 'grid-template-columns 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease'
+              }}
             >
               {isLoading
                 ? Array.from({ length: 6 }).map((_, index) => (
                     <ProductSkeleton key={index} />
                   ))
-                : filteredProducts.map((product) => (
+                : filteredProducts.map((product, index) => (
                     <ProductCard
                       key={product.id}
                       product={product}
                       viewMode={viewMode}
+                      style={{
+                        animationDelay: `${index * 60}ms`,
+                        transitionDelay: isTransitioning ? `${index * 40}ms` : '0ms'
+                      }}
                     />
                   ))}
             </div>

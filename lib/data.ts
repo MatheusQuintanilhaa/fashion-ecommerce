@@ -9,7 +9,7 @@ export const products: Product[] = [
     price: 299.9,
     originalPrice: 399.9,
     discount: 25,
-    images: ["/images/products/t-shirt-social-branca/branca-frente.jpg"],
+    images: ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
     category: "masculino",
     sizes: ["PP", "P", "M", "G", "GG"],
     colors: ["Branco"],
@@ -23,7 +23,7 @@ export const products: Product[] = [
       "Camisa social slim fit em algodão premium. Ideal para o ambiente corporativo e eventos formais.",
     price: 189.9,
     images: [
-      "https://images.unsplash.com/photo-1713881842156-3d9ef36418cc?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1713881842156-3d9ef36418cc?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],
@@ -38,7 +38,7 @@ export const products: Product[] = [
       "Jaqueta jeans clássica com lavagem especial. Versátil e atemporal para compor diversos looks.",
     price: 249.9,
     images: [
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -55,7 +55,7 @@ export const products: Product[] = [
     originalPrice: 249.9,
     discount: 20,
     images: [
-      "https://images.unsplash.com/photo-1655476546240-d25fcff696bf?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1655476546240-d25fcff696bf?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "acessorios",
     sizes: ["36", "37", "38", "39", "40", "41", "42"],
@@ -70,7 +70,7 @@ export const products: Product[] = [
       "Blusa feminina com estampa floral delicada. Tecido leve e confortável para o verão.",
     price: 129.9,
     images: [
-      "https://images.unsplash.com/photo-1693989241284-b1bc01263135?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1693989241284-b1bc01263135?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "feminino",
     sizes: ["PP", "P", "M", "G"],
@@ -177,8 +177,8 @@ export const products: Product[] = [
       "Blazer masculino corte slim em tecido misto. Elegância e sofisticação para o guarda-roupa masculino.",
     price: 449.9,
     images: [
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=75&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=75&w=400&auto=format&fit=crop&fm=webp&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "masculino",
     sizes: ["P", "M", "G", "GG"],

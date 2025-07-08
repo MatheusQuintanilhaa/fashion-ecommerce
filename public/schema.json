@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fashion",
+  "description": "Sua loja de moda online. Descubra as últimas tendências da moda com nossa coleção exclusiva.",
+  "url": "https://fashion-store.vercel.app",
+  "logo": "https://fashion-store.vercel.app/favicon.svg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-11-99999-9999",
+    "contactType": "customer service",
+    "availableLanguage": "Portuguese"
+  },
+  "sameAs": [
+    "https://facebook.com/fashion",
+    "https://instagram.com/fashion",
+    "https://twitter.com/fashion"
+  ]
+}

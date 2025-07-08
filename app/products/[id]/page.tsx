@@ -19,6 +19,7 @@ import { useCart } from "@/hooks/use-cart";
 import { useWishlist } from "@/hooks/use-wishlist";
 import { toast } from "sonner";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SizeGuideModal } from "@/components/size-guide-modal";
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -168,7 +169,10 @@ export default function ProductDetailPage() {
 
             {/* Size Selection */}
             <div className="space-y-3">
-              <Label className="text-lg font-semibold">Tamanho</Label>
+              <div className="flex items-center justify-between">
+                <Label className="text-lg font-semibold">Tamanho</Label>
+                <SizeGuideModal category={product.category} />
+              </div>
               <div className="grid grid-cols-5 gap-3">
                 {product.sizes.map((size) => (
                   <Button

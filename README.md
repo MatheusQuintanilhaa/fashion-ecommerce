@@ -438,6 +438,6 @@ Agradecimentos especiais às tecnologias e ferramentas que tornaram este projeto
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/matheus-quintanilha)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matheussantos.quintanilha@gmail.com)
 
-**Desenvolvido com ❤️ por Matheus Quintanilha**
+**Desenvolvido por Matheus Quintanilha**
 
 </div>

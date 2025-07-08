@@ -84,14 +84,19 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">F</span>
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
+                  <span className="text-white font-bold text-lg">F</span>
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full opacity-75 animate-pulse" />
               </div>
-              <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <div className="flex flex-col">
+                <span className="text-2xl font-black text-white tracking-tight">
                   Fashion
                 </span>
-                <div className="text-xs text-gray-400">Estilo & Elegância</div>
+                <span className="text-xs text-purple-400 font-medium tracking-wide">
+                  PREMIUM STORE
+                </span>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">

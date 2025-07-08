@@ -22,6 +22,21 @@ export const metadata: Metadata = {
   authors: [{ name: "Fashion Team" }],
   creator: "Fashion",
   publisher: "Fashion",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+      {
+        url: "/placeholder-logo.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/placeholder-logo.png",
+  },
   robots: {
     index: true,
     follow: true,

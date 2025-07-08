@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Scrollbar</title>
+    <style>
+        /* TESTE SCROLLBAR CUSTOMIZADA */
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #9333ea, #ec4899);
+            border-radius: 8px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #7c3aed, #db2777);
+        }
+        
+        /* Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #9333ea #f1f1f1;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #f3e8ff, #fce7f3);
+            min-height: 200vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #9333ea;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .content {
+            height: 150vh;
+            background: linear-gradient(180deg, #ffffff, #f8fafc);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9333ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Teste de Scrollbar Customizada</h1>
+        <div class="content">
+            <h2>Scrollbar com Gradiente Roxo/Rosa</h2>
+            <p>Role a página para ver a scrollbar customizada funcionando!</p>
+            
+            <h3>Características:</h3>
+            <ul>
+                <li>Width: 16px</li>
+                <li>Gradiente: #9333ea → #ec4899</li>
+                <li>Hover effect: cores mais escuras</li>
+                <li>Border radius: 8px</li>
+                <li>Compatível com Chrome, Safari, Edge</li>
+                <li>Firefox com scrollbar-color</li>
+            </ul>
+            
+            <h3>Teste de Conteúdo Longo:</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            
+            <div style="height: 50vh; background: linear-gradient(45deg, #ede9fe, #fdf2f8); margin: 20px 0; border-radius: 8px; padding: 20px;">
+                <h4>Bloco de conteúdo</h4>
+                <p>Este é um bloco de conteúdo para aumentar a altura da página e forçar o aparecimento da scrollbar.</p>
+            </div>
+            
+            <div style="height: 50vh; background: linear-gradient(45deg, #fdf2f8, #ede9fe); margin: 20px 0; border-radius: 8px; padding: 20px;">
+                <h4>Outro bloco</h4>
+                <p>Mais conteúdo para garantir que a página seja longa o suficiente para mostrar a scrollbar.</p>
+            </div>
+            
+            <p style="text-align: center; margin-top: 50vh;">🎯 Final da página - scrollbar funcionando!</p>
+        </div>
+    </div>
+</body>
+</html>

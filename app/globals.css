@@ -96,3 +96,109 @@ body {
   transform: translateZ(0);
   will-change: transform;
 }
+
+/* Custom Scrollbar - Tema do Site */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #8b5cf6 100%);
+  border-radius: 10px;
+  border: 2px solid #f9fafb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #db2777 50%, #7c3aed 100%);
+  border-width: 1px;
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #6d28d9 0%, #be185d 50%, #6d28d9 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #f9fafb;
+}
+
+/* Firefox Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #f9fafb;
+  scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Mobile touch scrolling optimization */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Hover effects for better UX */
+.scrollable-area::-webkit-scrollbar-thumb {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scrollable-area:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* Scrollbar para áreas específicas */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 100%);
+  border-radius: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+/* Animação suave para elementos com scroll */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Efeito de fade nas bordas do scroll */
+.scroll-fade {
+  position: relative;
+}
+
+.scroll-fade::before,
+.scroll-fade::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scroll-fade::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.scroll-fade::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+}

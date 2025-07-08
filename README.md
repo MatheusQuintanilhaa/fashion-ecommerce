@@ -6,7 +6,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-## 🚀 [Ver Demo ao Vivo](https://fashion-ecommerce-demo.vercel.app)
+## 🚀 [Ver Demo ao Vivo](https://fashion-ecommerce-blue.vercel.app/)
 
 ![Fashion E-commerce Preview](https://via.placeholder.com/1200x600/6366f1/ffffff?text=Fashion+E-commerce+Preview)
 
@@ -23,7 +23,7 @@
 **Frontend:** Next.js 14 • TypeScript • Tailwind CSS • Context API  
 **Performance:** Image optimization • Code splitting • CSS purging  
 **UX/UI:** Responsive design • Loading states • Micro-animações  
-**Dados:** localStorage persistence • Custom hooks • Error boundaries  
+**Dados:** localStorage persistence • Custom hooks • Error boundaries
 
 ## ✨ Funcionalidades
 
@@ -61,7 +61,7 @@ npm run dev
 Desenvolvido como **showcase frontend** demonstrando:
 
 - ⚛️ **React/Next.js avançado** com App Router
-- 🎨 **Design system** consistente e moderno  
+- 🎨 **Design system** consistente e moderno
 - 🚀 **Otimizações de performance** reais
 - 📱 **UX/UI responsiva** e acessível
 - 🔧 **Código escalável** e maintível
